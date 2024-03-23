@@ -1,0 +1,141 @@
+:root {
+    --heigth: 768px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+html {
+    background-color: hsl(30, 38%, 92%);
+}
+body {
+    min-height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+}
+.card__img {
+    width: 100%;
+    height: 100%;
+    background-image: url(image-product-desktop.jpg);
+    background-size: cover;
+}
+.card__img--phone {
+    display: none;
+}
+.card__information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 32px;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.card__description {
+    line-height: 2rem;
+}
+
+.card__details:first-child {
+    color: hsl(212, 21%, 14%);
+    font-size: 1.2rem;
+}
+
+
+.money-incash {
+    display: flex;
+    align-items: center;
+}
+
+.card__prices {
+    display: inline;
+    font-family: outfit;
+    color: hsl(228, 12%, 48%);
+}
+
+.card__prices:first-child {
+    font-size: 4rem;
+    font-family: Fraunces;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.button {    
+    background-color: hsl(158, 36%, 37%);
+    height: 50px;
+    width: 236px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: #1a4031;
+}
+
+.button span, .button__icon {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #fff;
+}
+.button span {
+    font-family: Montserrat;
+    font-weight: 580;
+}
+
+
+@media (max-width: 375px) {
+    .card {
+        width: 344px;
+        height: 61.2rem;
+        flex-direction: column;
+    }
+
+    .card__information {
+        padding: 0 24px;
+        margin: 24px 0;
+
+    }
+
+
+    .card__description {
+        line-height: 2.4rem;
+    }
+    .card__img {
+        display: none;
+    }
+
+    .card__img--phone {
+        display: block;
+        background-image: url(image-product-mobile.jpg);
+        height: 240px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .button {
+        width: 100%;
+        height: 48px;
+    }
+
+}
+
+
+
